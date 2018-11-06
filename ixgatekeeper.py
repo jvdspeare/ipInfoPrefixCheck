@@ -39,8 +39,10 @@ def ip_check(asn, cidr, ipinfo_token):
         ip_check.response = False
 
 
+# prompt user for input
 user_input('Enter ASN:', 'Enter IP Subnet:', 'ipinfo.io Token:')
 
+# run ip_check for each ip subnet
 for i in user_input.cidr:
     ip_check(user_input.asn, i, user_input.token)
     if ip_check.response is True:
