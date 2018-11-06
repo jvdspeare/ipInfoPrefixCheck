@@ -44,6 +44,6 @@ user_input('Enter ASN:', 'Enter IP Subnet:', 'ipinfo.io Token:')
 for i in user_input.cidr:
     ip_check(user_input.asn, i, user_input.token)
     if ip_check.response is True:
-        print(i + 'is true')
+        print(i + ' is associated with ' + user_input.asn)
     else:
-        print(i + 'is false')
+        print(i + ' is not associated with ' + user_input.asn)
